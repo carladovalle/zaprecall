@@ -1,24 +1,16 @@
 import styled from 'styled-components';
 
 export default function Questions() {
+
+    const numbers = ['1','2','3','4','5','6','7','8'];
+
     return(
             <QuestionsScreen>
-                <Question>
-                    Pergunta 1
-                    <ion-icon class="icon" name="play-outline"></ion-icon>
-                </Question>
-                <Question>
-                    Pergunta 2
-                    <ion-icon class="icon" name="play-outline"></ion-icon>
-                </Question>
-                <Question>
-                    Pergunta 3
-                    <ion-icon class="icon" name="play-outline"></ion-icon>
-                </Question>
-                <Question>
-                    Pergunta 4
-                    <ion-icon class="icon" name="play-outline"></ion-icon>
-                </Question>
+                {numbers.map(number => 
+                    <Question>
+                        Pergunta {number} 
+                        <ion-icon class="icon" name="play-outline"></ion-icon>
+                    </Question>)}
             </QuestionsScreen>
     )
 }
@@ -29,7 +21,8 @@ const QuestionsScreen = styled.ul`
     flex-direction: column;
     align-items: center;
     width: 375px;
-    height: 414px;
+    height: 800px;
+    overflow-y: scroll;
 `
 const Question = styled.li`
     width: 300px;

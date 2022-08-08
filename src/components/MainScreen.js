@@ -20,7 +20,7 @@ export default function HomeScreen() {
 
 const Screen = styled.div`
     width: 375px;
-    height: 597px;
+    height: 100%;
     background-color: #FB6B6B;
     font-family: 'Recursive', sans-serif;
     color: #333333;

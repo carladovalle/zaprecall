@@ -16,4 +16,7 @@ const FooterScreen = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 46px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 `
