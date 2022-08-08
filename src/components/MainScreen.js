@@ -1,12 +1,15 @@
+import React from 'react';
 import styled from 'styled-components';
 import Questions from './Questions';
 import Footer from './Footer';
+
+import ImageLogo from "./../assets/images/logo.png";
 
 export default function HomeScreen() {
     return(
         <Screen>
             <Logo>
-                <Image src="./images/logo.png" />
+                <Img src={ImageLogo} />
                 <Name>ZapRecall</Name>
             </Logo>
             <Questions />
@@ -26,7 +29,7 @@ const Logo = styled.div`
     display: flex;
     flex-direction: row;
 `
-const Image = styled.img`
+const Img = styled.img`
     width: 52px;
     height: 60px;
     margin-top: 42px;

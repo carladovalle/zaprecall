@@ -1,11 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
 
-export default function HomeScreen() {
+import ImageLogo from "./../assets/images/logo.png";
+
+export default function HomeScreen({setScreen}) {
     return(
         <Screen>
-            <Image src="./images/logo.png" />
+            <Img src={ImageLogo} />
             <Name>ZapRecall</Name>
-            <StartButton>Iniciar Recall</StartButton>
+            <Button onClick={() => setScreen('screen')}>Iniciar Recall</Button>
         </Screen>
     )
 }
@@ -18,7 +21,7 @@ const Screen = styled.div`
     flex-direction: column;
     align-items: center;
 `
-const Image = styled.img`
+const Img = styled.img`
     width: 136px;
     height: 161px;
     margin-top: 148px;
@@ -30,7 +33,7 @@ const Name = styled.div`
     margin-top: 13px;
     font-family: 'Righteous';
 `
-const StartButton = styled.div`
+const Button = styled.button`
     width: 246px;
     height: 54px;
     background-color: #FFFFFF;
