@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HomeScreen from "./HomeScreen";
-import MainScreen from "./MainScreen";
+import Questions from "./Questions";
 
 export default function App () {
 
@@ -10,7 +10,7 @@ export default function App () {
     return (
         <>
             {
-                screen === 'init' ? <HomeScreen setScreen={setScreen} /> : <MainScreen />
+                screen === 'init' ? <HomeScreen setScreen={setScreen} /> : <Questions />
             }
         </>
     )

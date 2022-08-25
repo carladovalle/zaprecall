@@ -6,8 +6,8 @@ import ImageLogo from "./../assets/images/logo.png";
 export default function HomeScreen({setScreen}) {
     return(
         <Screen>
-            <Img src={ImageLogo} />
-            <Name>ZapRecall</Name>
+            <img src={ImageLogo} />
+            <h1>ZapRecall</h1>
             <Button onClick={() => setScreen('screen')}>Iniciar Recall</Button>
         </Screen>
     )
@@ -20,18 +20,19 @@ const Screen = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
-const Img = styled.img`
-    width: 136px;
-    height: 161px;
-    margin-top: 148px;
-`
-const Name = styled.div`
-    font-size: 36px;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin-top: 13px;
-    font-family: 'Righteous';
+
+    img {
+        width: 136px;
+        height: 161px;
+        margin-top: 148px;
+    }
+    h1 {
+        font-size: 36px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-top: 13px;
+        font-family: 'Righteous';
+    }
 `
 const Button = styled.button`
     width: 246px;
@@ -46,4 +47,8 @@ const Button = styled.button`
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
 `
