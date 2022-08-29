@@ -40,7 +40,6 @@ export default function Questions () {
             } else {
                 return {
                     ...value,
-                    tap: false,
                 }
             }
         })
@@ -103,6 +102,6 @@ const QuestionsScreen = styled.ul`
     flex-direction: column;
     align-items: center;
     width: 375px;
-    height: 810px;
+    height: 900px;
     overflow-y: scroll;
 `

@@ -15,6 +15,38 @@ function Card ({number, index, tapCard}) {
 function CardQuestionn ({question, answer, index}) {
 
     const [flipped, setFlipped] = React.useState(false);
+    const [state, setState] = React.useState("");
+
+    const red = "#FF3030";
+    const orange = "#FF922E";
+    const green = "#2FBE34";
+
+    if (state === "IDidNotRemember") {
+        return (
+            <QuestionAfterAnswering color={red}> 
+                    Pergunta {index + 1}
+                    <ion-icon name="close-circle"></ion-icon>
+            </QuestionAfterAnswering>
+        )
+    }
+
+    if (state === "IAlmostDidNotRemember") {
+        return (
+            <QuestionAfterAnswering color={orange}>
+                Pergunta {index + 1}
+                <ion-icon name="help-circle"></ion-icon>
+            </QuestionAfterAnswering>
+        )
+    }
+
+    if (state === "zap") {
+        return (
+            <QuestionAfterAnswering color={green}>
+                Pergunta {index + 1}
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </QuestionAfterAnswering>
+        )
+    }
 
     return (
         <>
@@ -28,6 +60,11 @@ function CardQuestionn ({question, answer, index}) {
             ) : <FlashCard>
                     <h1>
                         {answer}
+                        <Buttons>
+                            <Button color={red} border={red} onClick={() => {setState("IDidNotRemember")}}>Não lembrei</Button>
+                            <Button color={orange} border={orange} onClick={() => setState("IAlmostDidNotRemember")}>Quase não lembrei</Button>
+                            <Button color={green} border={green} onClick={() => setState("zap")}>Zap!</Button>
+                        </Buttons>
                     </h1>
                 </FlashCard>}
         </>
@@ -80,7 +117,7 @@ const FlashCard = styled.div`
         margin-left: 15px;
     }
     img {
-        margin-top: 75px;
+        margin-top: 60px;
         margin-left: 254px;
 
         &:hover {
@@ -99,6 +136,41 @@ const Question = styled.li`
     align-items: center;
     margin-top: 25px;
     flex-direction: row;
+
+    &:hover {
+        cursor: pointer;
+    }
+`
+const QuestionAfterAnswering = styled.li`
+    width: 300px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    flex-direction: row;
+    color: ${props => props.color};
+    text-decoration-line: line-through;
+`
+const Buttons = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 7.74px;
+`
+const Button = styled.button`
+    width: 85.17px;
+    height: 37.17px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 2px;
+    background-color: ${props => props.color};
+    border: ${props => props.color};
 
     &:hover {
         cursor: pointer;
