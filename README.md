@@ -1,8 +1,9 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/97575616/159168337-db954903-5c89-45d4-aae7-7ac410f00e10.png" width="600px" alt="">
-</p>
-
-<h1 align="center">ZapRecall</h1>
+<div align="center">
+  <a href="https://github.com/picinelli/projeto-zaprecall/">
+    <img src="https://github.com/picinelli/projeto-zaprecall/blob/main/src/assets/raio.svg" alt="logo" width="100">
+    <h1 align="center">ZapRecall</h1>
+  </a>
+ </div>
  
 ![uses-react](https://img.shields.io/badge/REACT-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 [![uses-javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com)
@@ -20,12 +21,10 @@
 
 ## Descrição do Projeto
 
-<p align="justify">Meu segundo projeto utilizando React foi implementar um aplicativo de flashcards chamado Zap Recall! A ideia é ler a pergunta ou afirmação e tentar lembrar a resposta. Diante dele, dependendo do seu conhecimento, você fica sabendo quais conteúdos estão frescos na sua memória e quais não estão. Quando nos lembramos instantaneamente da resposta obtemos um "Zap!"⚡.</p>
+<p align="justify">Meu segundo projeto utilizando React. A ideia é ler a pergunta ou afirmação e tentar lembrar a resposta. Diante dele, dependendo do seu conhecimento, você fica sabendo quais conteúdos estão frescos na sua memória e quais não estão. Quando nos lembramos instantaneamente da resposta obtemos um "Zap!"⚡.</p>
 
 ### Mockup
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/97575616/159169818-c708670e-605a-4390-8084-c66db1c15ec0.png" alt="mockup">
-</div>
+![Banner](https://github.com/picinelli/projeto-zaprecall/blob/main/src/assets/ZapRecall-banner.png)
 
 ## Como rodar a aplicação
 
